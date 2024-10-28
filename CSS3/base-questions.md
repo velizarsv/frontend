@@ -112,3 +112,109 @@ Use feature detection libraries like Modernizr.
 Utilize fallback styles for unsupported features.
 Test across multiple browsers and devices.
 Keep up-to-date with browser support tables like Can I Use.
+
+# CSS Interview Questions: Box Model and Flexbox
+
+## Box Model
+
+1. **What is the CSS Box Model?**
+   - The CSS Box Model is a fundamental concept that describes the rectangular boxes generated for elements in the document tree and consists of margins, borders, padding, and the actual content.
+
+2. **Can you explain the difference between `content-box` and `border-box`?**
+   - `content-box` is the default box model where the width and height apply only to the content. `border-box` includes padding and border in the width and height.
+ ```css
+   /* content-box */
+   .content-box {
+       box-sizing: content-box;
+       width: 200px;
+       padding: 20px;
+       border: 10px solid black;
+   }
+
+   /* border-box */
+   .border-box {
+       box-sizing: border-box;
+       width: 200px;
+       padding: 20px;
+       border: 10px solid black;
+   }
+```
+3. **How do you center a block element horizontally using the Box Model?**
+   - You can center a block element by setting its `margin` property to `auto` and specifying a width.
+
+4. **What is the purpose of the `box-sizing` property?**
+   - The `box-sizing` property is used to alter the default CSS Box Model. It can be set to `content-box` or `border-box`.
+
+## Flexbox
+
+1. **What is Flexbox and why is it useful?**
+   - Flexbox is a CSS layout module designed to provide a more efficient way to lay out, align, and distribute space among items in a container, even when their size is unknown or dynamic.
+
+2. **How do you create a flex container?**
+   - You create a flex container by setting the `display` property of an element to `flex` or `inline-flex`.
+```css
+.flex-container {
+    display: flex;
+}
+```
+3. **What are the main properties of a flex container?**
+   - The main properties include `flex-direction`, `justify-content`, `align-items`, `align-content`, and `flex-wrap`.
+```css
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+```
+4. **How does the `flex` property work?**
+   - The `flex` property is a shorthand for `flex-grow`, `flex-shrink`, and `flex-basis`. It defines how a flex item will grow or shrink to fit the space available in its flex container.
+```css
+.flex-item {
+    flex: 1 1 auto; /* flex-grow | flex-shrink | flex-basis */
+}
+```
+5. **What is the difference between `justify-content` and `align-items`?**
+   - `justify-content` aligns items along the main axis, while `align-items` aligns items along the cross axis.
+   - Justify-Content (Centering Horizontally)
+   - Align-Items (Centering Vertically)
+```css
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Main axis */
+    align-items: center; /* Cross axis */
+}
+```
+## 6. Center div flexbox
+```html
+<head>
+<style>
+        .container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            border: 2px solid #000;
+        }
+
+        .centered-div {
+            width: 200px;
+            height: 200px;
+            background-color: #f0a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="centered-div"></div>
+    </div>
+</body>
+```
+**Explanation**
+.container - This is the flex container. By setting display: flex, we enable Flexbox on this element.
+justify-content: center; centers the child elements horizontally.
+align-items: center; centers the child elements vertically.
+height: 100vh; makes the container take up the full height of the viewport.
+.centered-image: This is the image we want to center. It has a fixed width and an automatic height to maintain its aspect ratio.
+    
