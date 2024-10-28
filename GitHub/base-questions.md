@@ -45,4 +45,7 @@ Answer: A continuous integration (CI) workflow typically involves setting up aut
 <details>
  <summary>12. Can you explain what "cherry-picking" means in Git?</summary>
 Answer: Cherry-picking allows you to apply a specific commit from one branch onto another branch without merging all changes from the source branch. This is done using git cherry-pick <commit-hash>.
+</details><details>
+ <summary>13. Create and switch to the new branch</summary>
+Answer: git checkout -b feature-branch-name <commit-hash>.
 </details>
