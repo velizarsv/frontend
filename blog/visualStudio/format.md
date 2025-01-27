@@ -1,4 +1,6 @@
-We will start by installing the Prettier extension for VS Code. Once you have installed it, you can use it with CTRL + CMD + P (MacOS) or CTRL + Shift + P (Windows) to manually format a file or a selection of code.
+We will start by installing the Prettier extension for VS Code. Once you have installed it, you can use it with:<br/>
+CTRL + CMD + P (MacOS) or <br/>
+CTRL + Shift + P (Windows) to manually format a file or a selection of code.<br/>
 <br/><br/>
 If you don't want to format your file with the given shortcut manually every time, you can format it on save as well. Therefore you need to open your VS Code user's settings/preferences as JSON and enter the following configuration:<br/><br/>
 // enable globally (here: format on save)<br/>
